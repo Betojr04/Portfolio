@@ -18,5 +18,10 @@ def contact_page():
     return render_template("contact.html")
 
 
+@app.route("/resume")
+def resume_page():
+    return render_template("resume.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

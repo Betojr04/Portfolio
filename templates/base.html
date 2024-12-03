@@ -16,13 +16,21 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <style>
+      .btn-primary:hover {
+        background: #0056b3;
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Dev Beto</a>
+        <div class="container">
+          <a class="navbar-brand" href="/">Dev Beto</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -35,18 +43,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/projects"
+                  >Projects</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="/resume">Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="/contact">Contact</a>
               </li>
             </ul>
           </div>
