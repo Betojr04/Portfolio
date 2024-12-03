@@ -1,11 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def server_check():
-    return "<h1>Hello, the server is up and running</h1>"
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
