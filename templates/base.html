@@ -16,12 +16,38 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <style>
       .btn-primary:hover {
         background: #0056b3;
         transform: scale(1.05) translateY(-2px);
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease-in-out;
+      }
+      @media (max-width: 768px) {
+        /* Adjusting for tablets and smaller screens */
+        h1 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+        .btn {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        /* Adjusting for mobile screens */
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .btn {
+          padding: 0.75rem 1.5rem;
+        }
       }
     </style>
   </head>

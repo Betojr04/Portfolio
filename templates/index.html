@@ -2,57 +2,52 @@
 content %}
 <section
   style="
-    background: url('https://placehold.co/600x400') no-repeat center
-      center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    text-align: center;
+    padding: 2rem;
+
     color: black;
   "
 >
-  <div
+  <h1 class="display-4 fw-bold mb-3">Hola, I'm Alberto Valtierra Jr</h1>
+  <p class="lead mb-4">
+    Freelance services tailored to businesses and technical expertise for
+    recruiters—your goals, my commitment.
+  </p>
+  <div>
+    <a
+      href="/projects"
+      class="btn btn-primary btn-lg mb-2 me-md-2"
+      style="width: 100%; max-width: 300px"
+    >
+      I’m a Business – Let’s Build Something
+    </a>
+    <a
+      href="/projects"
+      class="btn btn-primary btn-lg mb-2 me-md-2"
+      style="width: 100%; max-width: 300px"
+    >
+      I’m a Recruiter – View My Portfolio
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2
     style="
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       text-align: center;
-      height: 100vh;
+      align-items: center;
+      padding: 2rem;
     "
   >
-    <h1 style="font-size: 4rem; font-weight: bold">
-      Hola, I'm Alberto Valtierra Jr
-    </h1>
-    <p style="font-size: 1.5rem">
-      Full Stack Engineer | Problem Solver | Creator
-    </p>
-    <div>
-      <a
-        class="btn-primary"
-        href="/projects"
-        style="
-          padding: 1rem 2rem;
-          background: #007bff;
-          color: white;
-          text-decoration: none;
-          font-size: 1.25rem;
-          border-radius: 5px;
-          margin-right: 1rem;
-        "
-        >View My Work</a
-      >
-      <a
-        class="btn-secondary"
-        href="/contact"
-        style="
-          padding: 1rem 2rem;
-          border: 2px solid white;
-          color: white;
-          text-decoration: none;
-          font-size: 1.25rem;
-          border-radius: 5px;
-        "
-        >Contact Me</a
-      >
-    </div>
-  </div>
+    About me
+  </h2>
 </section>
 {% endblock %}
