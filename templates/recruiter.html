@@ -1,0 +1,89 @@
+{% extends 'base.html' %} {% block title %}Recruiters{% endblock %} {% block
+content %}
+<section class="recruiters-hero py-5 text-center bg-light">
+  <div class="container">
+    <h1 class="fw-bold">Recruiters</h1>
+    <p class="lead">Explore my skills, projects, and professional journey.</p>
+  </div>
+</section>
+
+<section class="about-me py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p class="text-center">
+      I’m a full-stack software engineer specializing in Python, Flask, and
+      JavaScript. I have a proven track record of building efficient, scalable
+      applications.
+    </p>
+  </div>
+</section>
+
+<section class="skills py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <ul class="list-unstyled text-center">
+      <li><strong>Languages:</strong> Python, JavaScript, Java</li>
+      <li><strong>Frameworks:</strong> Flask, React, Bootstrap</li>
+      <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+      <li><strong>Tools:</strong> APIs, Git, Docker</li>
+    </ul>
+  </div>
+</section>
+
+<section class="portfolio py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Portfolio Projects</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h4>E-Commerce API</h4>
+        <p>
+          Built a RESTful API with Flask and MySQL, handling user authentication
+          and payment processing.
+        </p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h4>Financial Tracker</h4>
+        <p>
+          Developed a Python CLI app to help users track expenses and savings.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="resume py-5 bg-dark text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold">View My Resume</h2>
+    <a href="/resume.pdf" class="btn btn-primary btn-lg">Download Resume</a>
+  </div>
+</section>
+
+<section class="cta py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold">Let’s Connect</h2>
+    <form action="/contact" method="POST">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        class="form-control mb-2"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        class="form-control mb-2"
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+        class="form-control mb-2"
+      ></textarea>
+      <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

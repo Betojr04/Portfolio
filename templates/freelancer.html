@@ -1,24 +1,89 @@
-{% extends 'base.html' %} {% block title %}Freelance{% endblock %} {% block
-content %}
-<style>
-  .freelance-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-  }
+{% extends 'base.html' %} {% block title %}Freelance Services{% endblock %} {%
+block content %}
+<section class="freelance-hero py-5 text-center bg-light">
+  <div class="container">
+    <h1 class="fw-bold">Freelance Services</h1>
+    <p class="lead">
+      Custom software solutions tailored to your business needs.
+    </p>
+  </div>
+</section>
 
-  @media (min-width: 992px) {
-    .freelance-section {
-      padding: 4rem;
-      text-align: left;
-    }
-  }
-</style>
+<section class="services py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Services I Offer</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h4>
+          <i class="fas fa-laptop-code text-primary me-2"></i> Landing Page
+          Design
+        </h4>
+        <p>High-converting landing pages optimized for mobile and SEO.</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h4>
+          <i class="fas fa-database text-success me-2"></i> Full-Stack
+          Development
+        </h4>
+        <p>Custom software solutions tailored to your business needs.</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h4>
+          <i class="fas fa-calendar-alt text-warning me-2"></i> Scheduling
+          Systems
+        </h4>
+        <p>
+          Streamline your business operations with intuitive scheduling tools.
+        </p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h4>
+          <i class="fas fa-chart-line text-danger me-2"></i> Financial Tools
+        </h4>
+        <p>Automate your finances with easy-to-use tracking systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section>
-  <h1>Freelance</h1>
+<section class="portfolio py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Portfolio of Work</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h4>Booking System</h4>
+        <p>
+          Built a booking system for [Fake Gym Co.], reducing no-shows by 20%.
+        </p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <h4>Landing Page</h4>
+        <p>
+          Designed a landing page for [Local Coffee Shop], increasing sign-ups
+          by 30%.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">What My Clients Say</h2>
+    <blockquote class="blockquote text-center">
+      <p>
+        "The scheduling tool Alberto created saved my team hours every week!"
+      </p>
+      <footer class="blockquote-footer">[Fake Small Biz Owner]</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="cta py-5 bg-dark text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold">Ready to Build Something Great?</h2>
+    <p>Contact me for a free consultation!</p>
+    <a href="/contact" class="btn btn-primary btn-lg">Contact Me</a>
+  </div>
 </section>
 {% endblock %}

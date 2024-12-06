@@ -28,5 +28,10 @@ def freelaner_page():
     return render_template("freelancer.html")
 
 
+@app.route("/recruiter")
+def recruiter_page():
+    return render_template("recruiter.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
