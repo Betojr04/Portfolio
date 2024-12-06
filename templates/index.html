@@ -1,7 +1,8 @@
 {% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block
 content %}
-<section
-  style="
+<style>
+  /* Hero Section Styles */
+  .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,45 +10,127 @@ content %}
     height: 100vh;
     text-align: center;
     padding: 2rem;
-
     color: black;
-  "
->
+  }
+
+  @media (min-width: 992px) {
+    .hero-section {
+      text-align: left;
+      padding: 4rem;
+    }
+  }
+
+  /* About Section Styles */
+  .about-section {
+    border: solid red 1px; /* For debugging */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem; /* Ensures spacing below hero section */
+    overflow: hidden; /* Prevents image overflow */
+    position: relative; /* Containment for children */
+    min-height: 70vh; /* Prevents section from collapsing */
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 150px; /* Keeps image size manageable */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem; /* Adds spacing above the image */
+  }
+
+  .about-text {
+    max-width: 600px;
+  }
+
+  @media (min-width: 992px) {
+    .about-content {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about-image {
+      max-width: 200px; /* Increases image size for larger screens */
+      margin-right: 1rem; /* Adds spacing between image and text */
+      margin-top: 0; /* Removes top margin in row layout */
+    }
+
+    .about-text {
+      text-align: left;
+    }
+  }
+
+  /* Button Group Styles */
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .btn-group {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+</style>
+
+<section class="hero-section">
   <h1 class="display-4 fw-bold mb-3">Hola, I'm Alberto Valtierra Jr</h1>
   <p class="lead mb-4">
     Freelance services tailored to businesses and technical expertise for
     recruiters—your goals, my commitment.
   </p>
-  <div>
-    <a
-      href="/projects"
-      class="btn btn-primary btn-lg mb-2 me-md-2"
-      style="width: 100%; max-width: 300px"
-    >
+  <div class="btn-group">
+    <a href="/freelance" class="btn btn-primary btn-lg">
       I’m a Business – Let’s Build Something
     </a>
-    <a
-      href="/projects"
-      class="btn btn-primary btn-lg mb-2 me-md-2"
-      style="width: 100%; max-width: 300px"
-    >
+    <a href="/projects" class="btn btn-primary btn-lg">
       I’m a Recruiter – View My Portfolio
     </a>
   </div>
 </section>
 
-<section>
-  <h2
-    style="
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-      padding: 2rem;
-    "
-  >
-    About me
-  </h2>
+<section class="about-section">
+  <div class="about-content">
+    <img
+      src="/static/images/beto.jpg"
+      alt="Alberto Valtierra Jr"
+      class="about-image"
+    />
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am a results-driven full-stack software engineer specializing in
+        Python, Flask, and JavaScript, with expertise in building scalable and
+        efficient solutions tailored to diverse needs. For businesses, I deliver
+        high-impact freelance services like custom landing pages, scheduling
+        systems, and financial tools designed to streamline operations and drive
+        growth. For recruiters, I bring a strong technical foundation, a proven
+        track record in crafting innovative applications, and a collaborative
+        mindset that adds value to any team. Whether solving complex problems
+        for clients or contributing to organizational success, I am committed to
+        delivering exceptional outcomes.
+      </p>
+      <p>
+        <strong>Let’s create something exceptional together!</strong>
+      </p>
+    </div>
+  </div>
 </section>
+
 {% endblock %}

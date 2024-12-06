@@ -23,5 +23,10 @@ def resume_page():
     return render_template("resume.html")
 
 
+@app.route("/freelance")
+def freelaner_page():
+    return render_template("freelancer.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

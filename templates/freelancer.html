@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block title %}Freelance{% endblock %} {% block
+content %}
+<style>
+  .freelance-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    .freelance-section {
+      padding: 4rem;
+      text-align: left;
+    }
+  }
+</style>
+
+<section>
+  <h1>Freelance</h1>
+</section>
+{% endblock %}

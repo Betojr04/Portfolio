@@ -1,2 +1,4 @@
 venv/ 
 flask/
+
+node_modules/
