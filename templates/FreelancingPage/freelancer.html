@@ -1,62 +1,52 @@
 {% extends 'base.html' %} {% block title %}Freelance Services{% endblock %} {%
 block content %}
-<section class="freelance-hero py-5 text-center bg-light">
+
+<section class="freelance-hero">
   <div class="container">
-    <h1 class="fw-bold">Freelance Services</h1>
+    <h1>Freelance Services</h1>
     <p class="lead">
       Custom software solutions tailored to your business needs.
     </p>
   </div>
 </section>
 
-<section class="services py-5">
+<section class="services">
   <div class="container">
-    <h2 class="text-center mb-4">Services I Offer</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <h4>
-          <i class="fas fa-laptop-code text-primary me-2"></i> Landing Page
-          Design
-        </h4>
+    <h2>Services I Offer</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h4><i class="fas fa-laptop-code"></i> Landing Page Design</h4>
         <p>High-converting landing pages optimized for mobile and SEO.</p>
       </div>
-      <div class="col-md-6 mb-4">
-        <h4>
-          <i class="fas fa-database text-success me-2"></i> Full-Stack
-          Development
-        </h4>
+      <div class="service-card">
+        <h4><i class="fas fa-database"></i> Full-Stack Development</h4>
         <p>Custom software solutions tailored to your business needs.</p>
       </div>
-      <div class="col-md-6 mb-4">
-        <h4>
-          <i class="fas fa-calendar-alt text-warning me-2"></i> Scheduling
-          Systems
-        </h4>
+      <div class="service-card">
+        <h4><i class="fas fa-calendar-alt"></i> Scheduling Systems</h4>
         <p>
           Streamline your business operations with intuitive scheduling tools.
         </p>
       </div>
-      <div class="col-md-6 mb-4">
-        <h4>
-          <i class="fas fa-chart-line text-danger me-2"></i> Financial Tools
-        </h4>
+      <div class="service-card">
+        <h4><i class="fas fa-chart-line"></i> Financial Tools</h4>
         <p>Automate your finances with easy-to-use tracking systems.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="portfolio py-5 bg-light">
+<section class="portfolio">
   <div class="container">
-    <h2 class="text-center mb-4">Portfolio of Work</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4">
+    <h2>Portfolio of Work</h2>
+    <div class="project-grid">
+      <div class="project-card">
         <h4>Booking System</h4>
         <p>
           Built a booking system for [Fake Gym Co.], reducing no-shows by 20%.
         </p>
       </div>
-      <div class="col-md-6 mb-4">
+      <div class="project-card">
         <h4>Landing Page</h4>
         <p>
           Designed a landing page for [Local Coffee Shop], increasing sign-ups
@@ -67,10 +57,10 @@ block content %}
   </div>
 </section>
 
-<section class="testimonials py-5">
+<section class="testimonials">
   <div class="container">
-    <h2 class="text-center mb-4">What My Clients Say</h2>
-    <blockquote class="blockquote text-center">
+    <h2>What My Clients Say</h2>
+    <blockquote class="testimonial">
       <p>
         "The scheduling tool Alberto created saved my team hours every week!"
       </p>
@@ -79,11 +69,171 @@ block content %}
   </div>
 </section>
 
-<section class="cta py-5 bg-dark text-white text-center">
+<section class="cta">
   <div class="container">
-    <h2 class="fw-bold">Ready to Build Something Great?</h2>
+    <h2>Ready to Build Something Great?</h2>
     <p>Contact me for a free consultation!</p>
-    <a href="/contact" class="btn btn-primary btn-lg">Contact Me</a>
+    <a href="/contact" class="btn btn-primary">Contact Me</a>
   </div>
 </section>
+
+<style>
+  /* General Styling */
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  /* Hero Section */
+  .freelance-hero {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+
+  .freelance-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  /* Section Styles */
+  section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Services Section */
+  .services {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 3rem;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-card i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+
+  /* Portfolio Section */
+  .portfolio {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+  }
+
+  .project-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Testimonials */
+  .testimonials {
+    background: #007bff;
+    color: white;
+    border-radius: 15px;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .testimonial {
+    font-size: 1.4rem;
+    font-style: italic;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  /* CTA Section */
+  .cta {
+    background: #202124;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+  }
+
+  .cta a {
+    background: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .cta a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .freelance-hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .project-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-card {
+      width: 100%;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 {% endblock %}

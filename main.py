@@ -1,4 +1,8 @@
 from flask import Flask, request, jsonify, render_template
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -15,7 +19,11 @@ def projects_page():
 
 @app.route("/contact")
 def contact_page():
-    return render_template("ContactPage/contact.html")
+    return render_template(
+        "ContactPage/contact.html",
+        emailjs_service_id=os.environ.get("EMAILJS_SERVICE_ID"),
+        emailjs_template_id=os.environ.get("EMAILJS_TEMPLATE_ID"),
+    )
 
 
 @app.route("/resume")

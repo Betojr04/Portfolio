@@ -1,16 +1,16 @@
 {% extends 'base.html' %} {% block title %}Recruiters{% endblock %} {% block
 content %}
-<section class="recruiters-hero py-5 text-center bg-light">
+<section class="recruiters-hero">
   <div class="container">
-    <h1 class="fw-bold">Recruiters</h1>
+    <h1>Recruiters</h1>
     <p class="lead">Explore my skills, projects, and professional journey.</p>
   </div>
 </section>
 
-<section class="about-me py-5">
+<section class="about-me">
   <div class="container">
-    <h2 class="text-center mb-4">About Me</h2>
-    <p class="text-center">
+    <h2>About Me</h2>
+    <p>
       I’m a full-stack software engineer specializing in Python, Flask, and
       JavaScript. I have a proven track record of building efficient, scalable
       applications.
@@ -18,10 +18,10 @@ content %}
   </div>
 </section>
 
-<section class="skills py-5 bg-light">
+<section class="skills">
   <div class="container">
-    <h2 class="text-center mb-4">Skills</h2>
-    <ul class="list-unstyled text-center">
+    <h2>Skills</h2>
+    <ul>
       <li><strong>Languages:</strong> Python, JavaScript, Java</li>
       <li><strong>Frameworks:</strong> Flask, React, Bootstrap</li>
       <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
@@ -30,18 +30,18 @@ content %}
   </div>
 </section>
 
-<section class="portfolio py-5">
+<section class="portfolio">
   <div class="container">
-    <h2 class="text-center mb-4">Portfolio Projects</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4">
+    <h2>Portfolio Projects</h2>
+    <div class="projects">
+      <div class="project-card">
         <h4>E-Commerce API</h4>
         <p>
           Built a RESTful API with Flask and MySQL, handling user authentication
           and payment processing.
         </p>
       </div>
-      <div class="col-md-6 mb-4">
+      <div class="project-card">
         <h4>Financial Tracker</h4>
         <p>
           Developed a Python CLI app to help users track expenses and savings.
@@ -51,39 +51,201 @@ content %}
   </div>
 </section>
 
-<section class="resume py-5 bg-dark text-white text-center">
+<section class="resume">
   <div class="container">
-    <h2 class="fw-bold">View My Resume</h2>
-    <a href="/resume.pdf" class="btn btn-primary btn-lg">Download Resume</a>
+    <h2>View My Resume</h2>
+    <a href="/resume.pdf" class="btn btn-primary">Download Resume</a>
   </div>
 </section>
 
-<section class="cta py-5 bg-light text-center">
+<section class="cta">
   <div class="container">
-    <h2 class="fw-bold">Let’s Connect</h2>
+    <h2>Let’s Connect</h2>
     <form action="/contact" method="POST">
       <input
         type="text"
         name="name"
         placeholder="Your Name"
         required
-        class="form-control mb-2"
+        class="form-control"
       />
       <input
         type="email"
         name="email"
         placeholder="Your Email"
         required
-        class="form-control mb-2"
+        class="form-control"
       />
       <textarea
         name="message"
         placeholder="Your Message"
         required
-        class="form-control mb-2"
+        class="form-control"
       ></textarea>
-      <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+      <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
   </div>
 </section>
+
+<style>
+  /* General Styling */
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  /* Hero Section */
+  .recruiters-hero {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+
+  .recruiters-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  /* Section Styles */
+  section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* About Section */
+  .about-me {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* Skills Section */
+  .skills {
+    background: #007bff;
+    color: white;
+    border-radius: 15px;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .skills ul li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Portfolio Section */
+  .portfolio {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+  }
+
+  .projects {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Resume Section */
+  .resume {
+    background: #202124;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+  }
+
+  .resume a {
+    background: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .resume a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+
+  /* CTA Section */
+  .cta {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 3rem;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .btn-primary {
+    background: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .btn-primary:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .recruiters-hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .projects {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-card {
+      width: 100%;
+    }
+  }
+</style>
 {% endblock %}

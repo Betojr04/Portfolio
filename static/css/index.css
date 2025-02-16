@@ -24,7 +24,7 @@
 }
 
 .hero-section p {
-    color: #aaa;
+    color: white;
     font-size: 1.2rem;
     margin: 1rem 0;
 }
@@ -165,6 +165,8 @@
     font-weight: 600;
     color: #aaa;
     text-transform: uppercase;
+    text-align: center;
+    width: 100%;
     margin-left: 2rem;
     margin-bottom: 2rem;
 }
@@ -263,11 +265,9 @@
 }
 
 .methodology-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
     list-style: none;
@@ -275,7 +275,6 @@
 }
 
 .methodology-steps li {
-    flex: 1;
     background: #333;
     padding: 2rem;
     border-radius: 15px;
@@ -283,6 +282,11 @@
     color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 350px;
 }
 
 .methodology-steps li:hover {
@@ -306,34 +310,29 @@
     color: #ccc;
     font-size: 1.2rem;
     line-height: 1.8;
+    flex-grow: 1;
+
 }
 
-/* Methodology Section Responsive Design */
+/* Responsive Design */
 @media (max-width: 1024px) {
     .methodology-steps {
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for tablets */
     }
 
     .methodology-steps li {
-        padding: 1.5rem;
-    }
-
-    .methodology-steps li h4 {
-        font-size: 1.3rem;
-    }
-
-    .methodology-steps li p {
-        font-size: 1rem;
+        min-height: 300px;
     }
 }
 
 @media (max-width: 768px) {
     .methodology-steps {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .methodology-steps li {
-        width: 100%;
+        min-height: auto;
     }
 }
 
