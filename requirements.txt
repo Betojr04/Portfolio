@@ -32,7 +32,6 @@ peewee==3.17.7
 plaid-python==19.0.0
 platformdirs==4.3.6
 pluggy==1.4.0
-psycopg2-binary==2.9.6
 PyJWT==2.8.0
 pytest==7.4.4
 python-dateutil==2.9.0.post0
