@@ -49,3 +49,5 @@ urllib3==2.2.3
 webencodings==0.5.1
 Werkzeug==3.0.1
 yfinance==0.2.48
+psycopg2-binary==2.9.6
+
