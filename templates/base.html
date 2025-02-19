@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}Dev Beto {% endblock %}</title>
+    <title>{% block title %} Dev Beto {% endblock %}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='files/favicon.ico') }}"
     />
 
     <!-- Bootstrap CSS v5.2.1 -->
@@ -17,161 +22,157 @@
       crossorigin="anonymous"
     />
 
+    <!--STYLING-->
+    <style>
+      header {
+        margin-bottom: 2rem;
+      }
 
-  <!--STYLING-->
-<style>
-  header {
-    margin-bottom: 2rem;
-  }
+      /* Navbar */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+        height: 5.5rem;
+      }
 
-  /* Navbar */
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1050; 
-    height: 5.5rem;
-  }
- 
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #000;
+        text-decoration: none;
+        margin-top: -5px;
+      }
 
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000; 
-    text-decoration: none;
-    margin-top: -5px; 
-  }
+      .navbar-brand i {
+        color: #000;
+      }
 
+      .navbar-toggler {
+        border: none;
+        background-color: transparent;
+      }
 
+      .navbar-toggler-icon {
+        color: #000;
+        border: 2px solid #000;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-  .navbar-brand i {
-    color: #000;
-  }
+      .navbar-collapse {
+        padding: 1rem;
+      }
 
-  .navbar-toggler {
-    border: none;
-    background-color: transparent;
-  }
+      .navbar-nav {
+        margin-left: auto;
+        gap: 1rem;
+      }
 
-  .navbar-toggler-icon {
-    color: #000; 
-    border: 2px solid #000; 
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+      .nav-link {
+        color: #000;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+      }
 
-  .navbar-collapse {
-    padding: 1rem;
-  }
+      .nav-link:hover {
+        color: #007bff;
+      }
 
-  .navbar-nav {
-    margin-left: auto; 
-    gap: 1rem;
-  }
+      /* Mobile View Styling */
+      @media (max-width: 768px) {
+        .navbar-collapse {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+        }
 
-  .nav-link {
-    color: #000;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
+        .navbar-nav {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
 
-  .nav-link:hover {
-    color: #007bff;
-  }
+        .navbar-brand {
+          margin-top: 0;
+          justify-content: flex-start;
+        }
 
-  /* Mobile View Styling */
-  @media (max-width: 768px) {
-    .navbar-collapse {
-      position: absolute;
-      top: 100%; 
-      left: 0;
-      width: 100%;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-      background-color: #ffffff;
-    }
+        .nav-link {
+          color: #000;
+        }
 
-    .navbar-nav {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
+        .navbar-toggler-icon {
+          border-color: #000;
+        }
+      }
 
-    .navbar-brand {
-      margin-top: 0; 
-      justify-content: flex-start;
-    }
+      .btn-primary:hover {
+        background: #0056b3;
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+      }
 
-    .nav-link {
-      color: #000; 
-    }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
 
-    .navbar-toggler-icon {
-      border-color: #000; 
-    }
-  }
+      main {
+        flex: 1;
+      }
 
-  .btn-primary:hover {
-    background: #0056b3;
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-  }
+      footer {
+        background: #ffffff;
+        border-top: 1px solid #ccc;
+        color: black;
+        text-align: center;
+        padding: 1rem 0;
+      }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
+      footer a {
+        font-size: 1.2rem;
+      }
 
-  main {
-    flex: 1;
-  }
-
-  footer {
-    background: #ffffff;
-    border-top: 1px solid #ccc;
-    color: black;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  footer a {
-    font-size: 1.2rem;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-  }
-</style>
-
-
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
 
     <!--LINKS-->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    <link href="/static/css/index.css" rel="stylesheet"
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="/static/css/index.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
     <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  rel="stylesheet"
-/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-
     <!--HEADER & NAVBAR-->
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand d-flex align-items-center" href="/">
-        <i class="fa-brands fa-connectdevelop me-2"></i> Dev Beto
-      </a>
+            <i class="fa-brands fa-connectdevelop me-2"></i> Dev Beto
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -185,7 +186,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-
               <!--
               <li class="nav-item">
                 <a class="nav-link active" href="/projects">Projects</a>
@@ -202,10 +202,8 @@
       </nav>
     </header>
 
-
     <!--MAIN CONTENT-->
     <main>{% block content %} {% endblock %}</main>
-
 
     <!--FOOTER-->
     <footer class="bg-light text-black py-4">
@@ -248,14 +246,16 @@
     ></script>
 
     <!-- EmailJS library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
       // Initialize EmailJS with your public key
-      (function(){
-          emailjs.init("h7qtBGRh6qB0fQxjF");
-      })(); 
+      (function () {
+        emailjs.init("h7qtBGRh6qB0fQxjF");
+      })();
     </script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-   
   </body>
 </html>
