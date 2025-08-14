@@ -1,36 +1,53 @@
 <!-- HERO SECTION -->
 <section class="hero-section">
-  <div class="container">
-    <h1 class="display-4 fw-bold mb-3">Software Engineer</h1>
-    <p class="lead mb-4">Based in Phoenix, Arizona</p>
-    <a href="/contact" class="hero-button btn btn-primary btn-lg">Contact Me</a>
+  <div class="hero-bg">
+    <div class="hero-aurora"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-grid"></div>
+  </div>
+
+  <div class="container hero-inner">
+    <header class="hero-copy">
+      <h1 class="hero-title">
+        Software Engineer
+        <span class="hero-subtitle"
+          >Building clean systems & delightful UX</span
+        >
+      </h1>
+      <p class="hero-kicker">Based in Phoenix, Arizona</p>
+
+      <div class="hero-actions">
+        <a href="/contact" class="btn btn-primary hero-cta">
+          <span>Contact Me</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </header>
 
     <div class="button-cards">
-      <!-- Business Card -->
-      <div
-        class="card"
-        style="
-          background-image: url('https://images.unsplash.com/photo-1728044849313-cd9de74be59d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1c2luZXNzJTIwZ3Jvd3RofGVufDB8fDB8fHww');
-        "
+      <!-- Business Card (no image) -->
+      <a
+        href="/freelance"
+        class="card is-plain tilt"
+        aria-label="I’m a Business – Let’s Build Something"
       >
-        <a href="/freelance" class="card-content">
+        <div class="card-content">
           <i class="fas fa-briefcase"></i>
-          <p>I’m a Business – Let’s Build Something</p>
-        </a>
-      </div>
+          <p>I’m a Business — Let’s Build Something</p>
+        </div>
+      </a>
 
-      <!-- Recruiter Card -->
-      <div
-        class="card"
-        style="
-          background-image: url('https://images.unsplash.com/photo-1573495627361-d9b87960b12d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fHNvZnR3YXJlJTIwZW5naW5lZXJ8ZW58MHx8MHx8fDA%3D');
-        "
+      <!-- Recruiter Card (no image) -->
+      <a
+        href="/recruiter"
+        class="card is-plain tilt"
+        aria-label="I’m a Recruiter – View My Portfolio"
       >
-        <a href="/recruiter" class="card-content">
+        <div class="card-content">
           <i class="fas fa-search"></i>
-          <p>I’m a Recruiter – View My Portfolio</p>
-        </a>
-      </div>
+          <p>I’m a Recruiter — View My Portfolio</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>

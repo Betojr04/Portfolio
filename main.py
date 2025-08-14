@@ -17,6 +17,11 @@ def projects_page():
     return render_template("ProjectsPage/projects.html")
 
 
+# @app.route("/finance")
+# def finance_page():
+#     return render_template("Finance/finance.html")
+
+
 @app.route("/contact")
 def contact_page():
     return render_template(

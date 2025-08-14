@@ -1,0 +1,250 @@
+{% extends 'base.html' %} {% block title %}Finance Engineering{% endblock %} {%
+block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Finance Engineering</h1>
+    <p class="lead">
+      I build clean, auditable software for financial workflows—analytics, data
+      pipelines, dashboards, and backtesting.
+    </p>
+  </div>
+</section>
+
+<!-- DISCLOSURE (TOP) -->
+<section class="section-wrap">
+  <div class="container">
+    <div class="disclosure panel">
+      <div class="disclosure-icon"><i class="fas fa-scale-balanced"></i></div>
+      <div>
+        <h4 class="mb-1">Important</h4>
+        <p class="mb-0 muted">
+          The content and tools shown are for engineering demonstration and
+          education only and do not constitute investment advice or a
+          solicitation to buy/sell securities. Data may be delayed or simulated.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I BRING + METRICS -->
+<section class="section-wrap">
+  <div class="container">
+    <div class="panel bring-grid">
+      <div class="bring-copy">
+        <h2 class="section-title">What I Bring</h2>
+        <ul class="about-highlights">
+          <li>
+            <i class="fas fa-chart-line"></i> Market‑aware UX: risk, P&L,
+            drawdowns, TWR/MWR
+          </li>
+          <li>
+            <i class="fas fa-shield-alt"></i> Controls: logging, audit trails,
+            input validation, env separation
+          </li>
+          <li>
+            <i class="fas fa-database"></i> Pipelines: ingestion → clean room →
+            analytics → reports
+          </li>
+          <li>
+            <i class="fas fa-robot"></i> Research & automation: backtests,
+            screeners, alerts, notebooks
+          </li>
+        </ul>
+      </div>
+      <div class="bring-metrics">
+        <div class="metrics-strip">
+          <div class="metric">
+            <span class="metric-label">Backtests Run</span>
+            <span class="metric-value">10k+</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Pipelines</span>
+            <span class="metric-value">ETL → SQL</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Latency</span>
+            <span class="metric-value">&lt; 150ms*</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Coverage</span>
+            <span class="metric-value">Equities / Crypto</span>
+          </div>
+        </div>
+        <p class="muted mt-2" style="font-size: 0.9rem">
+          *for cached analytics reads
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTIZED SERVICES -->
+<section class="section-wrap">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Productized Offerings</h2>
+    <div class="service-grid">
+      <article class="service-card">
+        <h4><i class="fas fa-gauge-high"></i> Portfolio OS</h4>
+        <p>
+          Performance, TWR/MWR, factor exposure, risk, rebalancing, and
+          tax‑lots. Exportable reports.
+        </p>
+      </article>
+      <article class="service-card">
+        <h4><i class="fas fa-flask"></i> Backtest Playground</h4>
+        <p>
+          Strategy sandbox with parameter sweeps, walk‑forward testing, and
+          metrics like Sharpe/Sortino/max DD.
+        </p>
+      </article>
+      <article class="service-card">
+        <h4><i class="fas fa-diagram-project"></i> Data Pipeline</h4>
+        <p>
+          API ingestion (e.g., Plaid/Alpha Vantage/Polygon), normalization,
+          storage (Postgres), and quality checks.
+        </p>
+      </article>
+      <article class="service-card">
+        <h4><i class="fas fa-bell"></i> Signals & Alerts</h4>
+        <p>
+          Screeners, risk alerts, and scheduled reports to email/Slack with
+          visual snapshots.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLOSURE (MIDDLE) -->
+<section class="section-wrap">
+  <div class="container">
+    <div class="disclosure panel">
+      <div class="disclosure-icon"><i class="fas fa-scale-balanced"></i></div>
+      <div>
+        <h4 class="mb-1">Important</h4>
+        <p class="mb-0 muted">
+          The content and tools shown are for engineering demonstration and
+          education only and do not constitute investment advice or a
+          solicitation to buy/sell securities. Data may be delayed or simulated.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="section-wrap">
+  <div class="container">
+    <h2 class="section-title text-center mb-3">Representative Work</h2>
+    <p class="lead text-center mb-4">Finance‑fluent builds, end to end.</p>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-badge">Analytics</div>
+        <h4 class="project-title">Portfolio Analytics Dashboard</h4>
+        <p class="project-copy">
+          Ingests brokerage exports → Postgres; computes TWR/MWR, alpha vs.
+          benchmark, factor tilts; ships PDF reports.
+        </p>
+      </article>
+      <article class="project-card">
+        <div class="project-badge">Research</div>
+        <h4 class="project-title">Backtesting Notebook Suite</h4>
+        <p class="project-copy">
+          Modular indicators, slippage/fees modeling, parameter sweeps, and
+          equity curves with regime overlays.
+        </p>
+      </article>
+      <article class="project-card">
+        <div class="project-badge">Ops</div>
+        <h4 class="project-title">ETL: Accounts & Transactions</h4>
+        <p class="project-copy">
+          Plaid + enrichment → clean tables (positions, trades, lots); anomaly
+          checks and audit logs for changes.
+        </p>
+      </article>
+      <article class="project-card">
+        <div class="project-badge">Infra</div>
+        <h4 class="project-title">Low‑latency Data API</h4>
+        <p class="project-copy">
+          Cached reads for watchlists & charts; role‑based auth; observability
+          with structured logs + tracing.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STACK & DATA -->
+<section class="section-wrap">
+  <div class="container">
+    <div class="panel">
+      <h2 class="section-title mb-3">Stack & Data</h2>
+      <div class="chip-groups">
+        <div class="chip-group">
+          <p class="chip-group-title">Core</p>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Flask</span
+            ><span class="chip">PostgreSQL</span>
+            <span class="chip">Pandas</span><span class="chip">NumPy</span
+            ><span class="chip">Plotly/Chart.js</span>
+          </div>
+        </div>
+        <div class="chip-group">
+          <p class="chip-group-title">Data Providers*</p>
+          <div class="chips">
+            <span class="chip">Plaid</span
+            ><span class="chip">Alpha Vantage</span
+            ><span class="chip">Polygon.io</span>
+            <span class="chip">Yahoo Finance</span>
+          </div>
+        </div>
+        <div class="chip-group">
+          <p class="chip-group-title">Ops</p>
+          <div class="chips">
+            <span class="chip">Docker</span
+            ><span class="chip">GitHub Actions</span
+            ><span class="chip">Vercel</span><span class="chip">Render</span>
+          </div>
+        </div>
+      </div>
+      <p class="muted mt-2" style="font-size: 0.9rem">
+        *Providers depend on client licensing and use case.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLOSURE (END) -->
+<section class="section-wrap">
+  <div class="container">
+    <div class="disclosure panel">
+      <div class="disclosure-icon"><i class="fas fa-scale-balanced"></i></div>
+      <div>
+        <h4 class="mb-1">Important</h4>
+        <p class="mb-0 muted">
+          The content and tools shown are for engineering demonstration and
+          education only and do not constitute investment advice or a
+          solicitation to buy/sell securities. Data may be delayed or simulated.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container cta-wrap">
+    <h3 class="section-title">Build Finance Software with Edge</h3>
+    <p class="cta-text">
+      Tell me your objectives. I’ll propose an auditable, fast path to value.
+    </p>
+    <a href="/contact" class="btn btn-primary cta-button"
+      ><span>Start a Scope Call</span><i class="fas fa-arrow-right"></i
+    ></a>
+  </div>
+</section>
+
+{% endblock %}

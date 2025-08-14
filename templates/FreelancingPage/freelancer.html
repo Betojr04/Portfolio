@@ -1,242 +1,81 @@
 {% extends 'base.html' %} {% block title %}Freelance Services{% endblock %} {%
 block content %}
 
-<section class="freelance-hero">
+<!-- HERO -->
+<section class="page-hero freelance-hero">
   <div class="container">
-    <h1>Freelance Services</h1>
-    <p class="lead">
-      Custom software solutions tailored to your business needs.
-    </p>
+    <h1 class="page-title">Freelance Services</h1>
+    <p class="lead">Custom software that moves the needle for your business.</p>
   </div>
 </section>
 
-<section class="services">
+<!-- SERVICES -->
+<section class="section-wrap">
   <div class="container">
-    <h2>Services I Offer</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h4><i class="fas fa-laptop-code"></i> Landing Page Design</h4>
-        <p>High-converting landing pages optimized for mobile and SEO.</p>
-      </div>
-      <div class="service-card">
-        <h4><i class="fas fa-database"></i> Full-Stack Development</h4>
-        <p>Custom software solutions tailored to your business needs.</p>
-      </div>
-      <div class="service-card">
-        <h4><i class="fas fa-calendar-alt"></i> Scheduling Systems</h4>
-        <p>
-          Streamline your business operations with intuitive scheduling tools.
-        </p>
-      </div>
-      <div class="service-card">
-        <h4><i class="fas fa-chart-line"></i> Financial Tools</h4>
-        <p>Automate your finances with easy-to-use tracking systems.</p>
+    <div class="panel">
+      <h2 class="section-title text-center mb-4">Services I Offer</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <h4><i class="fas fa-laptop-code"></i> Landing Pages</h4>
+          <p>
+            High‑converting pages, mobile‑first, SEO‑sound, analytics‑ready.
+          </p>
+        </div>
+        <div class="service-card">
+          <h4><i class="fas fa-database"></i> Full‑Stack Apps</h4>
+          <p>From MVP to production—Flask/React, clean APIs, secure auth.</p>
+        </div>
+        <div class="service-card">
+          <h4><i class="fas fa-calendar-alt"></i> Scheduling Systems</h4>
+          <p>Booking, reminders, and ops dashboards to save your team hours.</p>
+        </div>
+        <div class="service-card">
+          <h4><i class="fas fa-chart-line"></i> Financial Tools</h4>
+          <p>Automations and dashboards for revenue, costs, and KPIs.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="portfolio">
+<!-- PORTFOLIO -->
+<section class="section-wrap">
   <div class="container">
-    <h2>Portfolio of Work</h2>
+    <h2 class="section-title text-center mb-3">Portfolio of Work</h2>
+    <p class="lead text-center mb-4">Concrete examples of what I can ship.</p>
     <div class="project-grid">
-      <div class="project-card">
-        <h4>Booking System</h4>
-        <p>
-          Can build you a scheduling system to automate your businesses
-          scheduling needs.
+      <article class="project-card">
+        <div class="project-badge">Ops</div>
+        <h4 class="project-title">Booking System</h4>
+        <p class="project-copy">
+          Automated scheduling with calendar sync and admin tools; cuts no‑shows
+          and manual back‑and‑forth.
         </p>
-      </div>
-      <div class="project-card">
-        <h4>Landing Page</h4>
-        <p>
-          Can design a landing page for your business with the goal if
-          increasing sign-ups, sales, and online presence.
+      </article>
+
+      <article class="project-card">
+        <div class="project-badge">Growth</div>
+        <h4 class="project-title">Landing Page</h4>
+        <p class="project-copy">
+          Designed for conversions with performance budgets, A/B test hooks, and
+          clean brand execution.
         </p>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- 
-  <section class="testimonials">
-  <div class="container">
-    <h2>What My Clients Say</h2>
-    <blockquote class="testimonial">
-      <p>
-        "The scheduling tool Alberto created saved my team hours every week!"
-      </p>
-      <footer class="blockquote-footer">[Fake Small Biz Owner]</footer>
-    </blockquote>
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container cta-wrap">
+    <h3 class="section-title">Ready to Build Something Great?</h3>
+    <p class="cta-text">
+      Tell me your goal—I'll propose the leanest path to it.
+    </p>
+    <a href="/contact" class="btn btn-primary cta-button">
+      <span>Contact Me</span><i class="fas fa-arrow-right"></i>
+    </a>
   </div>
 </section>
--->
-
-<section class="cta">
-  <div class="container">
-    <h2>Ready to Build Something Great?</h2>
-    <p>Contact me for a free consultation!</p>
-    <a href="/contact" class="btn btn-primary">Contact Me</a>
-  </div>
-</section>
-
-<style>
-  /* General Styling */
-  body {
-    font-family: "Poppins", sans-serif;
-    background: #f5f5f5;
-    color: #333;
-  }
-
-  /* Hero Section */
-  .freelance-hero {
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
-    text-align: center;
-    padding: 5rem 2rem;
-    border-radius: 15px;
-    margin: 2rem auto;
-    max-width: 1200px;
-  }
-
-  .freelance-hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-
-  /* Section Styles */
-  section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  /* Services Section */
-  .services {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 3rem;
-  }
-
-  .service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .service-card {
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    text-align: center;
-  }
-
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .service-card i {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 1rem;
-  }
-
-  /* Portfolio Section */
-  .portfolio {
-    text-align: center;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 3rem;
-  }
-
-  .project-grid {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .project-card {
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 2rem;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Testimonials */
-  .testimonials {
-    background: #007bff;
-    color: white;
-    border-radius: 15px;
-    padding: 3rem;
-    text-align: center;
-  }
-
-  .testimonial {
-    font-size: 1.4rem;
-    font-style: italic;
-    max-width: 700px;
-    margin: auto;
-  }
-
-  /* CTA Section */
-  .cta {
-    background: #202124;
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 15px;
-  }
-
-  .cta a {
-    background: #007bff;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: bold;
-    display: inline-block;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-
-  .cta a:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .freelance-hero h1 {
-      font-size: 2.5rem;
-    }
-
-    .project-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .project-card {
-      width: 100%;
-    }
-
-    .service-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
 
 {% endblock %}

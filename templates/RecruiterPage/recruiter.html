@@ -1,255 +1,153 @@
 {% extends 'base.html' %} {% block title %}Recruiters{% endblock %} {% block
 content %}
-<section class="recruiters-hero">
-  <div class="container">
-    <h1>Recruiters</h1>
-    <p class="lead">Explore my skills, projects, and professional journey.</p>
-  </div>
-</section>
 
-<section class="about-me">
+<!-- HERO -->
+<section class="page-hero recruiters-hero">
   <div class="container">
-    <h2>About Me</h2>
-    <p>
-      I’m a full-stack software engineer specializing in Python, Flask, and
-      JavaScript. I have a proven track record of building efficient, scalable
-      applications.
+    <h1 class="page-title">Recruiters</h1>
+    <p class="lead">
+      Skills, impact, and work samples—fast to scan, easy to trust.
     </p>
   </div>
 </section>
 
-<section class="skills">
+<!-- ABOUT -->
+<section class="section-wrap">
   <div class="container">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, JavaScript, Java</li>
-      <li><strong>Frameworks:</strong> Flask, React, Bootstrap</li>
-      <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
-      <li><strong>Tools:</strong> APIs, Git, Docker</li>
-    </ul>
-  </div>
-</section>
-
-<section class="portfolio">
-  <div class="container">
-    <h2>Portfolio Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h4>E-Commerce API</h4>
-        <p>
-          Built a RESTful API with Flask and MySQL, handling user authentication
-          and payment processing.
-        </p>
-      </div>
-      <div class="project-card">
-        <h4>Financial Dashboard</h4>
-        <p>
-          Personal finance management tool, using Plaid to connect to users
-          financial account and aggregate all of their data using a dashboard
-          and financial insights.
-        </p>
+    <div class="panel">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-4 text-center">
+          <img
+            src="/static/images/beto.jpg"
+            alt="Alberto Valtierra Jr"
+            class="about-image blob"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-12 col-lg-8">
+          <h2 class="section-title">About Me</h2>
+          <p class="mb-3">
+            Full‑stack engineer focused on clean systems and delightful UX. Core
+            stack: <strong>Python</strong>, <strong>Flask</strong>,
+            <strong>JavaScript</strong>. I ship quickly, document clearly, and
+            measure outcomes.
+          </p>
+          <ul class="about-highlights">
+            <li>
+              <i class="fas fa-gauge-high"></i> Fast, iterative delivery—low
+              risk, high signal
+            </li>
+            <li>
+              <i class="fas fa-diagram-project"></i> Modular architecture,
+              maintainable code
+            </li>
+            <li>
+              <i class="fas fa-chart-line"></i> Business‑first metrics and
+              impact
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="resume">
+<!-- SKILLS -->
+<section class="section-wrap">
   <div class="container">
-    <h2>View My Resume</h2>
-    <a href="/static/files/AlbertoResume.pdf" class="btn btn-primary"
-      >Download Resume</a
-    >
+    <div class="panel">
+      <h2 class="section-title text-center mb-4">Skills</h2>
+      <div class="chip-groups">
+        <div class="chip-group">
+          <p class="chip-group-title">Languages</p>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Java</span>
+          </div>
+        </div>
+        <div class="chip-group">
+          <p class="chip-group-title">Frameworks</p>
+          <div class="chips">
+            <span class="chip">Flask</span>
+            <span class="chip">React</span>
+            <span class="chip">Bootstrap</span>
+            <span class="chip">Marshmallow</span>
+          </div>
+        </div>
+        <div class="chip-group">
+          <p class="chip-group-title">Databases</p>
+          <div class="chips">
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MySQL</span>
+          </div>
+        </div>
+        <div class="chip-group">
+          <p class="chip-group-title">Tools</p>
+          <div class="chips">
+            <span class="chip">Docker</span>
+            <span class="chip">Git/GitHub</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Vercel</span>
+            <span class="chip">Heroku</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="cta">
+<!-- PORTFOLIO -->
+<section class="section-wrap">
   <div class="container">
-    <h2>Let’s Connect</h2>
-    <form action="/contact" method="POST">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-        class="form-control"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-        class="form-control"
-      />
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        required
-        class="form-control"
-      ></textarea>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
+    <h2 class="section-title text-center mb-3">Portfolio Projects</h2>
+    <p class="lead text-center mb-4">A few representative builds.</p>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-badge">API</div>
+        <h4 class="project-title">E‑Commerce API</h4>
+        <p class="project-copy">
+          RESTful API in Flask + MySQL with auth, role‑based access, and payment
+          webhooks. Focused on reliability (99.9% uptime) and clean docs.
+        </p>
+        <!-- optional: <a href="#" class="project-link">Case Study</a> -->
+      </article>
+
+      <article class="project-card">
+        <div class="project-badge">FinTech</div>
+        <h4 class="project-title">Financial Dashboard</h4>
+        <p class="project-copy">
+          Personal finance platform integrating Plaid for account aggregation,
+          insights, and a KPI dashboard with exportable reports.
+        </p>
+      </article>
+    </div>
   </div>
 </section>
 
-<style>
-  /* General Styling */
-  body {
-    font-family: "Poppins", sans-serif;
-    background: #f5f5f5;
-    color: #333;
-  }
+<!-- RESUME -->
+<section class="section-wrap">
+  <div class="container">
+    <div class="panel text-center">
+      <h2 class="section-title mb-2">View My Resume</h2>
+      <a href="/static/files/AlbertoResume.pdf" class="btn btn-primary"
+        >Download Resume</a
+      >
+    </div>
+  </div>
+</section>
 
-  /* Hero Section */
-  .recruiters-hero {
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
-    text-align: center;
-    padding: 5rem 2rem;
-    border-radius: 15px;
-    margin: 2rem auto;
-    max-width: 1200px;
-  }
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container cta-wrap">
+    <h3 class="section-title">Let’s Connect</h3>
+    <p class="cta-text">
+      Open to software engineering roles and impactful projects.
+    </p>
+    <a href="/contact" class="btn btn-primary cta-button">
+      <span>Contact</span><i class="fas fa-paper-plane"></i>
+    </a>
+  </div>
+</section>
 
-  .recruiters-hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-
-  /* Section Styles */
-  section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  /* About Section */
-  .about-me {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  /* Skills Section */
-  .skills {
-    background: #007bff;
-    color: white;
-    border-radius: 15px;
-    padding: 3rem;
-    text-align: center;
-  }
-
-  .skills ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .skills ul li {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Portfolio Section */
-  .portfolio {
-    text-align: center;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 3rem;
-  }
-
-  .projects {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .project-card {
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 2rem;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Resume Section */
-  .resume {
-    background: #202124;
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 15px;
-  }
-
-  .resume a {
-    background: #007bff;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: bold;
-    display: inline-block;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-
-  .resume a:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-  }
-
-  /* CTA Section */
-  .cta {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 3rem;
-  }
-
-  .form-control {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-
-  .btn-primary {
-    background: #007bff;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  .btn-primary:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .recruiters-hero h1 {
-      font-size: 2.5rem;
-    }
-
-    .projects {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .project-card {
-      width: 100%;
-    }
-  }
-</style>
 {% endblock %}
